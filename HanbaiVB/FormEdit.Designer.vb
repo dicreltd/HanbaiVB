@@ -22,33 +22,33 @@ Partial Class FormEdit
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.button2 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
+        Me.buttonCancel = New System.Windows.Forms.Button()
+        Me.buttonOK = New System.Windows.Forms.Button()
         Me.textBoxTanka = New System.Windows.Forms.TextBox()
         Me.label2 = New System.Windows.Forms.Label()
         Me.textBoxSname = New System.Windows.Forms.TextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'button2
+        'buttonCancel
         '
-        Me.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.button2.Location = New System.Drawing.Point(185, 120)
-        Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(75, 23)
-        Me.button2.TabIndex = 11
-        Me.button2.Text = "キャンセル"
-        Me.button2.UseVisualStyleBackColor = True
+        Me.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.buttonCancel.Location = New System.Drawing.Point(185, 120)
+        Me.buttonCancel.Name = "buttonCancel"
+        Me.buttonCancel.Size = New System.Drawing.Size(75, 23)
+        Me.buttonCancel.TabIndex = 11
+        Me.buttonCancel.Text = "キャンセル"
+        Me.buttonCancel.UseVisualStyleBackColor = True
         '
-        'button1
+        'buttonOK
         '
-        Me.button1.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.button1.Location = New System.Drawing.Point(47, 120)
-        Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(75, 23)
-        Me.button1.TabIndex = 10
-        Me.button1.Text = "OK"
-        Me.button1.UseVisualStyleBackColor = True
+        Me.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.buttonOK.Location = New System.Drawing.Point(47, 120)
+        Me.buttonOK.Name = "buttonOK"
+        Me.buttonOK.Size = New System.Drawing.Size(75, 23)
+        Me.buttonOK.TabIndex = 10
+        Me.buttonOK.Text = "OK"
+        Me.buttonOK.UseVisualStyleBackColor = True
         '
         'textBoxTanka
         '
@@ -84,11 +84,13 @@ Partial Class FormEdit
         '
         'FormEdit
         '
+        Me.AcceptButton = Me.buttonOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.buttonCancel
         Me.ClientSize = New System.Drawing.Size(294, 178)
-        Me.Controls.Add(Me.button2)
-        Me.Controls.Add(Me.button1)
+        Me.Controls.Add(Me.buttonCancel)
+        Me.Controls.Add(Me.buttonOK)
         Me.Controls.Add(Me.textBoxTanka)
         Me.Controls.Add(Me.label2)
         Me.Controls.Add(Me.textBoxSname)
@@ -100,8 +102,8 @@ Partial Class FormEdit
 
     End Sub
 
-    Private WithEvents button2 As Button
-    Private WithEvents button1 As Button
+    Private WithEvents buttonCancel As Button
+    Private WithEvents buttonOK As Button
     Private WithEvents textBoxTanka As TextBox
     Private WithEvents label2 As Label
     Private WithEvents textBoxSname As TextBox
